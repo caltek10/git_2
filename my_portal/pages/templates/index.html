@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <title>Главная</title>
 </head>
-<body>
 
+<body>
+{% block header %}
+ {% include "includes/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<article>
+    <h1>Вы на главной странице</h1>
+</article>
+{% endblock content %}
+
+{% block footer %}
+ {% include "includes/footer1.html" %}
+{% endblock footer %}
 </body>
 </html>

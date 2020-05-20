@@ -1,23 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>Главная страница{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    {% block css %}
+    {% endblock css %}
 </head>
 
 <body>
 {% block header %}
-{# {% include "includes/header.html" %} #}
+{% include "includes/header.html" %}
 {% endblock header %}
 
 {% block content %}
+    {% for page in pages %}
 <article>
-    <h1>Вы на главной странице</h1>
+    <h1>{{ page.title }}</h1>
+    <div>
+        {{ page.text }}
+    </div>
+    <b>
+        {{ page.created }}
+    </b>
 </article>
+    {% endfor %}
 {% endblock content %}
 
 {% block footer %}
- {% include "includes/footer1.html" %}
+    <iframe src="https://tut.by" ></iframe>
+    {% include "includes/footer1.html" %}
 {% endblock footer %}
 </body>
 </html>

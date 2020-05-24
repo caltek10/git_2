@@ -2,12 +2,17 @@ from django.shortcuts import render
 from django.conf import settings
 import os
 from pages.models import Pages
+from django.db.models import Q
+from django.core.exceptions import ObjectDoesNotExist
 
 
 
-def index(request):
-    me_pages = Pages.objects.all()
-    context = {"pages": me_pages}
+def index(request, page_id):
+    try:
+        page = Pages.objects.get(pk=page_id)
+    except ObjectDoesNotExist:
+        page = None
+    context = {'page': page}
     return render(request, 'index.html', context=context)
 def ded_moroz(request):
     my_list = [

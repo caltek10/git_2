@@ -9,5 +9,6 @@ class Pages(models.Model):
     created = models.DateTimeField(auto_created=True, null=True, blank=True)
     author = models.ForeignKey(User, null=True, blank=True, on_delete=models.DO_NOTHING)
 
+
     def __str__(self):
         return "%s - %s" % (self.pk, self.title)

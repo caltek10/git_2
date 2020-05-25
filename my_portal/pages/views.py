@@ -5,11 +5,13 @@ from pages.models import Pages
 from django.db.models import Q
 from django.core.exceptions import ObjectDoesNotExist
 
+from django.shortcuts import get_object_or_404
+
 
 
 def index(request, page_id):
     try:
-        page = Pages.objects.get(pk=page_id)
+        page = get_object_or_404(Pages, pk=page_id)
     except ObjectDoesNotExist:
         page = None
     context = {'page': page}

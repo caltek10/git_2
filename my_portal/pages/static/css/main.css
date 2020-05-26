@@ -1,6 +1,23 @@
 .my-widget{
-    background-color: #16b1e0;
+    background-color: #14c71afc;
     border-radius: 30px;
     padding: 15px;
     margin:10px;
+}
+.author {
+    text-transform: uppercase;
+}
+
+.text {
+    background-color: #f50ca7fc;
+    color: white;
+    padding: 10px;
+}
+
+#first_p {
+    text-transform: uppercase;
+}
+
+.text p{
+    font-size: 20px;
 }

@@ -1,4 +1,6 @@
-
-body {
-    background-color: #faf7f7;
+.my-widget{
+    background-color: #16b1e0;
+    border-radius: 30px;
+    padding: 15px;
+    margin:10px;
 }

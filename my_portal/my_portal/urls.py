@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('page/<int:page_id>/', views.index),
     #path('archive/<int:year>/<int;month>' views.index),
-    path('ded', views.ded_moroz)
+    path('ded', views.ded_moroz),
+    path('', views.static_page)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

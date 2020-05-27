@@ -9,10 +9,17 @@
 }
 
 .text {
-    background-color: #f50ca7fc;
-    color: white;
+    background-color: #edf5eefc;
+    color: black;
     padding: 10px;
 }
+
+.textarea {
+    background-color: #edf5eefc;
+    color-text: black;
+    padding: 10px;
+}
+
 
 #first_p {
     text-transform: uppercase;

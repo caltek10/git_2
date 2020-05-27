@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('page/<int:page_id>/', views.index),
+    path('ded/', views.ded_moroz),
     #path('archive/<int:year>/<int;month>' views.index),
-    path('ded', views.ded_moroz),
+    path('add-comment-url/', views.create_comment),
     path('', views.static_page)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

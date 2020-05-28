@@ -79,3 +79,34 @@
 
 </body>
 </html>
+<form>
+    <div class="container">
+    <form action="/add-comment-url/" method="post">
+         {% csrf_token %}
+        {{ form.as_p }}
+    <div class="col-6">
+
+            <div class="col-4">
+                <label>Никнейм:</label>
+                <input type="text" name="username" >
+
+            </div>
+            <div class="col-4">
+                <label>..  Пароль:</label>
+                <input type="password" name="password">
+
+            </div>
+
+            <div class="col-4">
+            <textarea class="text"></textarea>
+                <label>Нажмите на кнопку:</label>
+                <input type="submit" value="Кнопка">
+            </div>
+
+
+
+    </div>
+    </form>
+    </div>
+
+</form>
